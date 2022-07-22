@@ -10,38 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:weightSum="2"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/data"
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="80dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
-
-            android:text="10+10"
-            android:gravity="end|bottom"
-            android:textColor="@color/white"
-            android:background="#1D1D1D"
-            android:textSize="40sp"/>
-
-        <TextView
-            android:id="@+id/output"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-
-            android:text="20"
-            android:gravity="end|center"
-            android:textColor="@color/white"
-            android:background="#1D1D1D"
-            android:textSize="40sp"/>
-
+            android:layout_weight="6"
+            android:layout_margin="16dp"
+            android:src="@drawable/FBLogin"
+            android:layout_gravity="center"
+            android:contentDescription="TODO"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -49,373 +32,99 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/username"
+                   android:inputType="text"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Username or Phone Number">
+
+               </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:text="Log In"
+            android:textAllCaps="true"
+            android:background="@drawable/btn"/>
+
         <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/power"
+            <View
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="^"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/degree"
+                android:layout_height="2dp"
+                android:layout_weight="9"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="#000000">
+            </View>
+            
+            <TextView
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="deg"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textAlignment="center"
+                android:layout_weight="2"/>
 
-            <Button
-                android:id="@+id/sine"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="sin"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/cosine"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="cos"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/tangent"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="tan"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
+            <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="9"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#000000">
+            </View>
+            
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/radian"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="rad"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/cosecant"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="cosec"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/secant"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="sec"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-            <Button
-                android:id="@+id/cotangent"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="cot"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:background="@drawable/ripple_effect_scientific"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="50dp"
+            android:background="#26A32B"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textAlignment="center"
+            android:text="Create a new FaceBook Account"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"/>
 
-            <Button
-                android:id="@+id/addorsub"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="+/-"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/brackets"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="()"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/percentage"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="%"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/divison"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="/"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_operations"
-                />
-
-         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/number7"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="7"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number8"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="8"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number9"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="9"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/mutliplication"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="X"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/number4"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="4"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number5"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="5"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number6"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="6"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/subtraction"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="_"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/number1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="1"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number2"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="2"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number3"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="3"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/addition"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="+"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/clear"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="C"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/number0"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/dot"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="."
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/ripple_effect_numbers"
-                />
-
-            <Button
-                android:id="@+id/equal"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="="
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:background="@drawable/red_button"
-                />
-
-        </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
